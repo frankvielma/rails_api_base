@@ -69,7 +69,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Set ENV for CodeClimate
@@ -107,7 +107,6 @@ jobs:
         id: cpu_info
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
       - name: Install chromedriver
-        uses: actions/checkout@v2
         uses: nanasess/setup-chromedriver@v2
       - run: |
           export DISPLAY=:99
