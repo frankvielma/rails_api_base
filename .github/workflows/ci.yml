@@ -150,6 +150,14 @@ jobs:
         with:
           fetch-depth: 0
           ssh-key: "${{ secrets.PUSH_KEY }}"
+      - name: Install chromedriver
+        uses: nanasess/setup-chromedriver@v2
+        with:
+          chromedriver-version: 'latest'
+      - run: |
+          export DISPLAY=:99
+          chromedriver --url-base=/wd/hub &
+          sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
       - name: Set ENV for CodeClimate
         if: github.event_name == 'pull_request'
         run: |
