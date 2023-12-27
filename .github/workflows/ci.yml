@@ -108,8 +108,6 @@ jobs:
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
       - name: Install chromedriver
         uses: nanasess/setup-chromedriver@v2
-        with:
-          chromedriver-version: 'latest'
       - run: |
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
