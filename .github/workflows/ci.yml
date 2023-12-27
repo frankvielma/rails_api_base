@@ -106,10 +106,6 @@ jobs:
       - name: Get CPU info
         id: cpu_info
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
-      - name: Install chromedriver
-        run: |
-          curl -sSLO https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/120.0.6099.109/linux64/chromedriver-linux64.zip
-          unzip chromedriver_linux64.zip -d ~/.local/bin
       - name: Run Tests
         env:
           KNAPSACK_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
