@@ -107,6 +107,7 @@ jobs:
         id: cpu_info
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
       - name: Install chromedriver
+        uses: actions/checkout@v2
         uses: nanasess/setup-chromedriver@v2
       - run: |
           export DISPLAY=:99
