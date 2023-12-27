@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
   push:
-    branches: [main]
+    branches: [main, enhancement/add_support_js_selenium_chrome-copy]
 
 permissions:
   pull-requests: write
