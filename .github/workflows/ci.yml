@@ -106,8 +106,8 @@ jobs:
       - name: Get CPU info
         id: cpu_info
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
-      - name: help
-        run: Xvfb -help
+      - name: chrome version
+        run: google-chrome --version
       - name: Install chromedriver
         uses: nanasess/setup-chromedriver@v2
       - run: |
