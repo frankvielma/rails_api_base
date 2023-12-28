@@ -23,7 +23,6 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 Capybara.register_driver :chrome do |app|
   args = %w[no-sandbox disable-gpu]
   args << (ENV['SHOW'].present? ? 'non-headless' : 'headless')
-  args = %w[non-headless no-sandbox disable-gpu]
   options = Selenium::WebDriver::Chrome::Options.new(args:)
   Capybara::Selenium::Driver.new(app, browser: :chrome, options:)
 end
