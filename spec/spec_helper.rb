@@ -21,7 +21,7 @@ FactoryBot.reload
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |file| require file }
 
 Capybara.register_driver :headless_chrome do |app|
-  args = %w[headless no-sandbox disable-gpu]
+  args = %w[non-headless no-sandbox disable-gpu]
   options = Selenium::WebDriver::Chrome::Options.new(args:)
   Capybara::Selenium::Driver.new(app, browser: :chrome, options:)
 end
