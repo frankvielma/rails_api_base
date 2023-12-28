@@ -117,7 +117,7 @@ jobs:
           KNAPSACK_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
           KNAPSACK_CI_NODE_INDEX: ${{ matrix.ci_node_index }}
           PARALLEL_TESTS_CONCURRENCY: ${{ env.cpu_cores }}
-        run: bundle exec rspec'
+        run: bundle exec rspec
       - name: Check for missing annotations
         run: bundle exec annotate
       - name: Check for untracked changes in app and spec directories
