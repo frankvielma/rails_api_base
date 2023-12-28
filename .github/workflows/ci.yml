@@ -115,8 +115,7 @@ jobs:
         with:
           chromedriver-version: '120.0.6099.109'
       - run: |
-          export DISPLAY=:99
-          chromedriver --url-base=/wd/hub
+          chromedriver --url-base=/wd/hub &
       - name: Run Tests
         env:
           KNAPSACK_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
