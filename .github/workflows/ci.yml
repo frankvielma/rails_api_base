@@ -106,8 +106,6 @@ jobs:
       - name: Get CPU info
         id: cpu_info
         run: echo "cpu_cores=$(nproc)" >> $GITHUB_ENV
-      - name: chromedriver version
-        run:  chromedriver --version
       - name: Run Tests
         env:
           KNAPSACK_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
