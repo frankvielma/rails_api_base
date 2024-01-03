@@ -598,7 +598,7 @@ DEPENDENCIES
   octokit (~> 8.0)
   oj (~> 3.16)
   pagy (~> 6.2)
-  parallel_tests (~> 4.3)
+  parallel_tests (~> 4.4)
   pg (~> 1.5)
   pg_query (~> 4.2.3)
   prosopite (~> 1.4.2)
@@ -609,7 +609,7 @@ DEPENDENCIES
   rack-cors (~> 2.0)
   rails (~> 7.0.8)
   rails_best_practices (~> 1.20)
-  reek (~> 6.1, >= 6.1.1)
+  reek (~> 6.2)
   rspec-openapi (~> 0.10)
   rspec-rails (~> 6.1)
   rspec-retry!
